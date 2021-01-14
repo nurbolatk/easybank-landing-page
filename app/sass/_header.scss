@@ -1,9 +1,6 @@
 .header {
-  &__logo {
-    padding: 2.4rem 0;
-  }
-
   &__nav {
+    height: 8rem;
     margin: 0 auto; // only in desktop
     max-width: $container; // only in desktop
     padding: 0 2.4rem;
@@ -27,8 +24,6 @@
 
   &__links {
     display: flex;
-    align-self: stretch;
-    padding: 2.4rem 0;
     gap: 3.2rem;
 
     > a {
@@ -43,21 +38,25 @@
         content: "";
         height: 2px;
         position: absolute;
-        bottom: 0;
+        bottom: -5px;
         left: 0;
         width: 50%;
         background-image: $primary-gradient;
       }
 
-      &:hover::after {
-        opacity: 1;
+      &:hover {
+        color: $dark-blue;
+        &::after {
+          opacity: 1;
+        }
       }
     }
   }
 
   &__cta {
     border: none;
-    border-radius: 5rem;
+    // border-radius: 5rem;
+    border-radius: map-get($map: $breakpoints-down, $key: sm);
     background-image: $primary-gradient;
     color: white;
     font-weight: 700;
