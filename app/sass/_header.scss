@@ -1,0 +1,68 @@
+.header {
+  &__logo {
+    padding: 2.4rem 0;
+  }
+
+  &__nav {
+    margin: 0 auto; // only in desktop
+    max-width: $container; // only in desktop
+    padding: 0 2.4rem;
+  }
+
+  &__menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    > span {
+      display: block;
+      width: 2.4rem;
+      height: 1px;
+      background: $dark-blue;
+      &:not(:last-child) {
+        margin-bottom: 4px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    align-self: stretch;
+    padding: 2.4rem 0;
+    gap: 3.2rem;
+
+    > a {
+      position: relative;
+      display: block;
+      font-size: $text-small;
+      color: $grayish-blue;
+
+      &::after {
+        transition: all 0.2s;
+        opacity: 0;
+        content: "";
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 50%;
+        background-image: $primary-gradient;
+      }
+
+      &:hover::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  &__cta {
+    border: none;
+    border-radius: 5rem;
+    background-image: $primary-gradient;
+    color: white;
+    font-weight: 700;
+    font-size: $text-small;
+    cursor: pointer;
+    padding: 1.4rem 3.4rem;
+  }
+}

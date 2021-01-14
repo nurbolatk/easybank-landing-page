@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
 
 :root {
   font-size: 62.5%;
@@ -11,8 +11,32 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  // border: 1px dashed blue;
 }
 
 body {
-  font: 300 1.6rem /1.3 "Public Sans", sans-serif;
+  font: $text-medium / 1.3 "Public Sans", sans-serif;
+  color: $dark-blue;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+// Utility classes
+.flex {
+  display: flex !important;
+}
+
+.content-center {
+  justify-content: center !important;
+}
+
+.content-between {
+  justify-content: space-between !important;
+}
+
+.items-center {
+  align-items: center !important;
 }
