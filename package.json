@@ -1,0 +1,24 @@
+{
+  "name": "easybank-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nurbolatk/easybank-landing-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nurbolatk/easybank-landing-page/issues"
+  },
+  "homepage": "https://github.com/nurbolatk/easybank-landing-page#readme",
+  "devDependencies": {
+    "parcel": "^1.12.4",
+    "sass": "^1.32.4"
+  }
+}
