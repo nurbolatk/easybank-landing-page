@@ -4,7 +4,8 @@
   "description": "![Design preview for the Easybank landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel index.html",
+    "start": "npm run dev"
   },
   "repository": {
     "type": "git",
