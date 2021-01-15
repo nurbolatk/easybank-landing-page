@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400;700&display=swap');
 
 :root {
   font-size: 62.5%;
@@ -15,7 +15,7 @@
 }
 
 body {
-  font: 400 $text-medium / 1.3 "Public Sans", sans-serif;
+  font: 400 $text-medium / 1.3 'Public Sans', sans-serif;
   color: $dark-blue;
 }
 
@@ -47,13 +47,13 @@ button {
 
 // Visibility
 .hide-for-mobile {
-  @include if-size-is-less-than("md") {
-    display: none;
+  @include if-size-is-less-than('md') {
+    display: none !important;
   }
 }
 
 .hide-for-desktop {
-  @include if-size-is-bigger-than("lg") {
-    display: none;
+  @include if-size-is-bigger-than('lg') {
+    display: none !important;
   }
 }

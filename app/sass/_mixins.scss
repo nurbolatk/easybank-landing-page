@@ -1,0 +1,11 @@
+@mixin if-size-is-bigger-than($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+@mixin if-size-is-less-than($size) {
+  @media (max-width: map-get($breakpoints-down, $size)) {
+    @content;
+  }
+}
