@@ -101,24 +101,28 @@
 -->
 
 <header class="header">
-  <nav class="header__nav">
-    <a href="/">
-      <img src="./images/logo.svg" alt="Easybank" class="header__logo">
+  <nav class="header__nav flex content-between items-center">
+    <a class="header__logo" href="/">
+      <img src="./images/logo.svg" alt="Easybank">
     </a>
     
-    <div class="header__menu">
+    <button class="header__menu hide-for-desktop">
       <span></span>
       <span></span>
       <span></span>
-    </div>
+    </button>
     
-    <div class="header__links">
+    <div class="header__links hide-for-mobile">
       <a href="#">Home</a>
       <a href="#">About</a>
       <a href="#">Contact</a>
       <a href="#">Blog</a>
       <a href="#">Careers</a>
     </div>
+
+    <button class="header__cta hide-for-mobile">
+      Request Invite
+    </button>
   </nav>
 </header>
   <script src="app/js/app.js"></script>

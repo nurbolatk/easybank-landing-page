@@ -1,0 +1,37 @@
+// Colors
+
+$dark-blue: #2d314d;
+$lime-green: #31d35c;
+$bright-cyan: #2bb7da;
+
+$grayish-blue: #9698a6;
+$light-grayish-blue: #f3f4f6;
+$very-light-gray: #fafafa;
+$white: #ffffff;
+
+$primary-gradient: linear-gradient(to right, $lime-green, $bright-cyan);
+
+// Dimensions
+$container: 1134px;
+
+$text-small: 1.4rem;
+$text-medium: 1.8rem;
+
+// Breakpoints
+/* 
+small:   0 - 639px
+medium:  640 - 1023px
+large:   1024 - 1439px
+x-large: 1440 - Infinity
+*/
+
+$breakpoints-up: (
+  'md': 40em,
+  'lg': 64em,
+  'xl': 90em,
+);
+$breakpoints-down: (
+  'sm': 39.9375em,
+  'md': 63.9375em,
+  'lg': 89.9375em,
+);
