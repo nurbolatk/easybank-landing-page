@@ -1,13 +1,39 @@
 .header {
   position: relative;
-  z-index: 20;
-  background-color: white;
+
+  &.open &__menu {
+    > span:first-child {
+      transform: rotate(45deg);
+    }
+    > span:nth-child(2) {
+      opacity: 0;
+    }
+    > span:last-child {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &.open &__links {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+
+  &.open &__nav {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+  }
 
   &__nav {
     height: 8rem;
     margin: 0 auto; // only in desktop
     max-width: $container; // only in desktop
     padding: 0 2.4rem;
+    position: relative;
+    z-index: 20;
+    background-color: white;
   }
 
   &__menu {
@@ -33,18 +59,6 @@
     &:active {
       > span {
         background: $lime-green;
-      }
-    }
-
-    &.open {
-      > span:first-child {
-        transform: rotate(45deg);
-      }
-      > span:nth-child(2) {
-        opacity: 0;
-      }
-      > span:last-child {
-        transform: rotate(-45deg);
       }
     }
   }
@@ -80,7 +94,7 @@
     }
 
     @include if-size-is-less-than(md) {
-      position: absolute;
+      position: fixed;
       top: 10.4rem;
       right: 2.4rem;
       left: 2.4rem;
@@ -98,11 +112,6 @@
       opacity: 0;
       transform: translateY(-100%);
       pointer-events: none;
-    }
-    &.show {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: all;
     }
   }
 
