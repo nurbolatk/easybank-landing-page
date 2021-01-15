@@ -1,22 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  <link rel="stylesheet" href="app/sass/main.scss">
-  <title>Frontend Mentor | Easybank landing page</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="app/sass/main.scss" />
+    <title>Frontend Mentor | Easybank landing page</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  <!-- 
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 
   Home
   About
   Contact
@@ -100,31 +110,29 @@
   </div>
 -->
 
-<header class="header">
-  <nav class="header__nav flex content-between items-center">
-    <a class="header__logo" href="/">
-      <img src="./images/logo.svg" alt="Easybank">
-    </a>
-    
-    <button class="header__menu hide-for-desktop">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    
-    <div class="header__links hide-for-mobile">
-      <a href="#">Home</a>
-      <a href="#">About</a>
-      <a href="#">Contact</a>
-      <a href="#">Blog</a>
-      <a href="#">Careers</a>
-    </div>
+    <header class="header">
+      <nav class="header__nav flex content-between items-center">
+        <a class="header__logo" href="/">
+          <img src="./images/logo.svg" alt="Easybank" />
+        </a>
 
-    <button class="header__cta hide-for-mobile">
-      Request Invite
-    </button>
-  </nav>
-</header>
-  <script src="app/js/app.js"></script>
-</body>
+        <button id="btn-hamburger" class="header__menu hide-for-desktop">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="header__links hide-for-mobile">
+          <a href="#">Home</a>
+          <a href="#">About</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="#">Careers</a>
+        </div>
+
+        <button class="header__cta hide-for-mobile">Request Invite</button>
+      </nav>
+    </header>
+    <script src="app/js/app.js"></script>
+  </body>
 </html>
