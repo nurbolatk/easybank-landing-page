@@ -1,4 +1,6 @@
 .header {
+  --header-height: 6rem;
+
   position: relative;
 
   &.open &__menu {
@@ -27,13 +29,17 @@
   }
 
   &__nav {
-    height: 8rem;
+    height: var(--header-height);
     margin: 0 auto; // only in desktop
     max-width: $container; // only in desktop
     padding: 0 2.4rem;
     position: relative;
     z-index: 20;
     background-color: white;
+
+    @include if-size-is-bigger-than(md) {
+      --header-height: 8rem;
+    }
   }
 
   &__menu {
@@ -72,6 +78,7 @@
       display: block;
       font-size: $text-small;
       color: $grayish-blue;
+      transition: all 0.2s;
 
       &::after {
         transition: all 0.2s;
@@ -95,17 +102,26 @@
 
     @include if-size-is-less-than(md) {
       position: fixed;
-      top: 10.4rem;
+      top: calc(var(--header-height) + 2.4rem);
       right: 2.4rem;
       left: 2.4rem;
       flex-direction: column;
       background-color: white;
       padding: 2.4rem;
-      gap: 2rem;
-      align-items: center;
+      align-items: stretch;
+      text-align: center;
       border-radius: 2px;
+      gap: 0;
       > a {
+        padding: 1rem 0;
         color: $dark-blue;
+
+        &:hover::after {
+          display: none;
+        }
+        &:focus {
+          background: $light-grayish-blue;
+        }
       }
 
       transition: all 0.2s;
